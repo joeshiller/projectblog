@@ -209,20 +209,97 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Which socioeconmic indicators can cause and predict future coup events?</li>
 <li>Which model can best predict future coup attempts?</li>
 </ol>
-<div id="f432152c" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[1], line 28</span>
-<span class="ansi-red-fg">    - Political stability is key for development. Predicting and preventing coups can help maintain a stable environment for economic growth and development. Stability allows for long-term planning and better policies for improving people's lives.</span>
-                                                                                                                                                                                                                                              ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> unterminated string literal (detected at line 28)
-</pre>
+</section>
+<section id="background" class="level3">
+<h3 class="anchored" data-anchor-id="background">Background</h3>
+<p>Coups are sudden and often violent takeovers of a government by a small group, usually involving the military. They have been common in many regions, especially in Africa, Latin America, and parts of Asia. Coups can drastically change the political situation in a country and often have negative effects on political stability, economic growth, freedom and safety</p>
+<section id="negative-impacts-of-coups" class="level4">
+<h4 class="anchored" data-anchor-id="negative-impacts-of-coups">Negative Impacts of Coups</h4>
+<ol type="1">
+<li><strong>Political Instability</strong>:
+<ul>
+<li>Coups create a period of uncertainty and instability. They disrupt normal political processes and can lead to power struggles. This instability can make people lose trust in their government.</li>
+</ul></li>
+<li><strong>Economic Decline</strong>:
+<ul>
+<li>The economy usually suffers after a coup. Investors lose confidence, leading to less investment and economic growth. Countries may face sanctions from other nations, making economic recovery even harder.</li>
+</ul></li>
+<li><strong>Social Unrest</strong>:
+<ul>
+<li>Coups often lead to protests and violence. Governments may impose strict measures like curfews, which can increase tensions among the population.</li>
+</ul></li>
+<li><strong>Human Rights Violations</strong>:
+<ul>
+<li>After a coup, human rights abuses often increase. Political opponents, activists, and journalists can be targeted, leading to arrests, torture, and sometimes killings. With democratic processes suspended, there are fewer checks on power, allowing abuses to continue.</li>
+</ul></li>
+</ol>
+</section>
+<section id="importance-of-predicting-future-coups" class="level4">
+<h4 class="anchored" data-anchor-id="importance-of-predicting-future-coups">Importance of Predicting Future Coups</h4>
+<ol type="1">
+<li><strong>Preventative Measures</strong>:
+<ul>
+<li>Predicting future coups can help governments and international organizations take steps to prevent them. This might include diplomatic actions, economic aid, or support for democratic institutions to address instability.</li>
+</ul></li>
+<li><strong>Resource Allocation</strong>:
+<ul>
+<li>Prediction models can help direct resources to areas most at risk of coups. Governments and NGOs can focus their efforts where they are most needed, ensuring better use of resources.</li>
+</ul></li>
+<li><strong>Stability and Development</strong>:
+<ul>
+<li>Political stability is key for development. Predicting and preventing coups can help maintain a stable environment for economic growth and development. Stability allows for long-term planning and better policies for improving people’s lives.</li>
+</ul></li>
+<li><strong>Global Security</strong>:
+<ul>
+<li>Instability in one country can affect global security. Predicting coups can help prevent regional conflicts, mass migrations, and the spread of extremist ideologies. A stable world is safer and more prosperous for everyone.</li>
+</ul></li>
+</ol>
+<p>Understanding and predicting coups is important for maintaining political stability, economic growth, and safety in countries. Coups have severe negative impacts, including political instability, economic decline, social unrest, and human rights violations. By predicting future coups, policymakers and international organizations can take steps to prevent them, allocate resources efficiently, and promote stability and development. This proactive approach benefits both the countries at risk and contributes to global security and prosperity.</p>
+<div id="c03e3326" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the data</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'/home/jovyan/DH140-Final-Project/Coup data.csv'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'date'</span>] <span class="op">=</span> pd.to_datetime(data[[<span class="st">'year'</span>, <span class="st">'month'</span>, <span class="st">'day'</span>]])</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Trend of coup events over time by event type</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">8</span>))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'year'</span>] <span class="op">=</span> data[<span class="st">'date'</span>].dt.year</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>event_type_counts <span class="op">=</span> data.groupby([<span class="st">'year'</span>, <span class="st">'event_type'</span>]).size().reset_index(name<span class="op">=</span><span class="st">'counts'</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x<span class="op">=</span><span class="st">'year'</span>, y<span class="op">=</span><span class="st">'counts'</span>, hue<span class="op">=</span><span class="st">'event_type'</span>, data<span class="op">=</span>event_type_counts)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Trend of Coup Events Over Time by Event Type'</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Top 10 countries with the most coup events</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>top_countries <span class="op">=</span> data[<span class="st">'country'</span>].value_counts().head(<span class="dv">10</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>sns.barplot(x<span class="op">=</span>top_countries.values, y<span class="op">=</span>top_countries.index)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Top 10 Countries with the Most Coup Events'</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="DataAnalysis_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="DataAnalysis_files/figure-html/cell-2-output-2.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
