@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>coupsblog</title>
+<title>Discussion – coupsblog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +66,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">coupsblog</span>
     </a>
   </div>
@@ -149,7 +89,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,13 +112,13 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">coupsblog</h1>
+    <div class="quarto-title column-body">
+      <h1 class="title">Discussion</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
       
     
@@ -186,168 +126,34 @@ window.Quarto = {
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>This project aimed to analyze coup events across various countries and use socioeconomic indicators to predict future coup attempts. The analysis revealed that Bolivia, Sudan, Argentina, Haiti, Venezuela, Syria, Thailand, Iraq, Guatemala, and Panama are the top 10 countries with the most coup events, with Bolivia experiencing the highest number. The types of coup events, including coups, attempts, and conspiracies, varied significantly across different countries and time periods, influenced by unique political, economic, and social factors.</p>
+<p>Key socioeconomic indicators identified as predictors of future coup attempts include the Human Development Index (HDI), population size in recent years, economic forecasts from institutions like the IMF, World Bank, and UN, as well as growth rates in HDI and population. The Random Forest model outperformed Logistic Regression with L1 and L2 regularization in predicting future coup attempts, achieving a higher accuracy of 0.79 and better cross-validation AUC scores of 0.78. The Random Forest model’s superior performance is attributed to its ability to capture complex non-linear relationships and interactions between features, handle class imbalance effectively, and provide robust predictions despite outliers and noise.</p>
+<p>The Random Forest model results were impressive, with cross-validation accuracy scores ranging from 0.73 to 0.84 and cross-validation AUC scores ranging from 0.64 to 0.87. The average cross-validation accuracy was 0.791, and the average cross-validation AUC was 0.776. The test set accuracy was 0.795, demonstrating the model’s generalizability. The classification report further highlighted the model’s performance, with a precision, recall, and f1-score of 0.64 for class 0 (no coup attempts) and 0.86 for class 1 (coup attempts).</p>
+<p>Importantly, the Random Forest model identified the most significant features in predicting coup attempts. The Human Development Index (HDI), population size, and GDP were among the top predictors. These indicators highlight the critical role of socioeconomic factors in understanding and forecasting political instability. HDI reflects the overall development level of a country, while population size and GDP provide insights into demographic and economic conditions, respectively. These findings underscore the need to consider multiple dimensions of socioeconomic data when assessing the risk of coups.</p>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Understanding the patterns and causes of coup events is crucial for analyzing political stability and identifying factors that contribute to future coup attempts. By leveraging models like Random Forest, policymakers and analysts can take proactive measures to enhance political stability and prevent future political instability. This project underscores the importance of using advanced predictive models and comprehensive socioeconomic data to anticipate and mitigate the risks that events like this can cause. The data clearly shows that developing, authoritarian, and conflict-ridden countries are more prone to frequent coups and political instability. This instability has far-reaching negative impacts on the economic, social, and human rights conditions of the affected populations. Understanding these patterns and predicting future coups is crucial for implementing measures to enhance political stability and improve the quality of life in these regions. Tracking HDI &amp; GDP can help organizations provide aid to countries in need before their instability becomes out of control.</p>
+</section>
+<section id="datasets" class="level2">
+<h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
+<p>Peyton, Buddy; Bajjalieh, Joseph; Shalmon, Dan; Martin, Michael; Bonaguro, Jonathan; Soto, Emilio (2023): Cline Center Coup d’État Project Dataset. University of Illinois at Urbana-Champaign. https://doi.org/10.13012/B2IDB-9651987_V6</p>
+<p>Nidula Elgiriyewithana. (2023). Global Country Information Dataset 2023 [Data set]. Kaggle. https://doi.org/10.34740/KAGGLE/DSV/6101670</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1722646842288" data-listing-reading-time-sort="3" data-listing-word-count-sort="527">
-<div class="thumbnail">
-<p><a href="./posts/Discussion and Conclusion.html" class="no-external"></a></p><a href="./posts/Discussion and Conclusion.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/Discussion and Conclusion.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Discussion and Conclusion.html" class="no-external">Discussion</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Discussion and Conclusion.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/Discussion and Conclusion.html" class="no-external">This project aimed to analyze coup events across various countries and use socioeconomic indicators to predict future coup attempts. The analysis revealed that Bolivia…</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/Discussion and Conclusion.html" class="no-external"></a></p><a href="./posts/Discussion and Conclusion.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1722643988589" data-listing-reading-time-sort="5" data-listing-word-count-sort="935">
-<div class="thumbnail">
-<p><a href="./posts/DataAnalysis.html" class="no-external"></a></p><a href="./posts/DataAnalysis.html" class="no-external">
-<p class="card-img-top"><img src="posts/DataAnalysis_files/figure-html/cell-2-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/DataAnalysis.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/DataAnalysis.html" class="no-external">Background</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/DataAnalysis.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/DataAnalysis.html" class="no-external">This project aims to analyze coup events across various countries and then use socioeconomic indicators to predict a future coup attempt. The first dataset includes…</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/DataAnalysis.html" class="no-external"></a></p><a href="./posts/DataAnalysis.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1722646143752" data-listing-reading-time-sort="5" data-listing-word-count-sort="958">
-<div class="thumbnail">
-<p><a href="./posts/Data Analysis and Models.html" class="no-external"></a></p><a href="./posts/Data Analysis and Models.html" class="no-external">
-<p class="card-img-top"><img src="posts/Data Analysis and Models_files/figure-html/cell-2-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/Data Analysis and Models.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Data Analysis and Models.html" class="no-external">Methods and Data Analysis</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Data Analysis and Models.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/Data Analysis and Models.html" class="no-external"><strong>Why Use Random Forest?</strong></a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/Data Analysis and Models.html" class="no-external"></a></p><a href="./posts/Data Analysis and Models.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="news,code,analysis" data-listing-date-sort="1722556800000" data-listing-file-modified-sort="1722635948860" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/index.html" class="no-external"></a></p><a href="./posts/post-with-code/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/post-with-code/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/index.html" class="no-external">This is a post with executable code.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/index.html" class="no-external">
-<div class="listing-date">
-Aug 2, 2024
-</div>
-<div class="listing-author">
-Harlow Malloc
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="news" data-listing-date-sort="1722297600000" data-listing-file-modified-sort="1722635948866" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">This is the first post in a Quarto blog. Welcome!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Jul 30, 2024
-</div>
-<div class="listing-author">
-Tristan O’Malley
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
