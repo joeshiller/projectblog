@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Joseph Shiller">
+<meta name="description" content="Findings &amp; what it means">
 
-<title>Discussion – coupsblog</title>
+<title>Discussion and Results – coupsblog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,15 +115,38 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Discussion</h1>
-                      </div>
+      <h1 class="title">Discussion and Results</h1>
+                  <div>
+        <div class="description">
+          Findings &amp; what it means
+        </div>
+      </div>
+                </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Joseph Shiller </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 2 2024</p>
+      </div>
+    </div>
     
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">August 2 2024</p>
+      </div>
+    </div>
       
     </div>
     
@@ -137,10 +162,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="discussion" class="level3">
+<h3 class="anchored" data-anchor-id="discussion">Discussion</h3>
 <p>This project aimed to analyze coup events across various countries and use socioeconomic indicators to predict future coup attempts. The analysis revealed that Bolivia, Sudan, Argentina, Haiti, Venezuela, Syria, Thailand, Iraq, Guatemala, and Panama are the top 10 countries with the most coup events, with Bolivia experiencing the highest number. The types of coup events, including coups, attempts, and conspiracies, varied significantly across different countries and time periods, influenced by unique political, economic, and social factors.</p>
 <p>Key socioeconomic indicators identified as predictors of future coup attempts include the Human Development Index (HDI), population size in recent years, economic forecasts from institutions like the IMF, World Bank, and UN, as well as growth rates in HDI and population. The Random Forest model outperformed Logistic Regression with L1 and L2 regularization in predicting future coup attempts, achieving a higher accuracy of 0.79 and better cross-validation AUC scores of 0.78. The Random Forest model’s superior performance is attributed to its ability to capture complex non-linear relationships and interactions between features, handle class imbalance effectively, and provide robust predictions despite outliers and noise.</p>
 <p>The Random Forest model results were impressive, with cross-validation accuracy scores ranging from 0.73 to 0.84 and cross-validation AUC scores ranging from 0.64 to 0.87. The average cross-validation accuracy was 0.791, and the average cross-validation AUC was 0.776. The test set accuracy was 0.795, demonstrating the model’s generalizability. The classification report further highlighted the model’s performance, with a precision, recall, and f1-score of 0.64 for class 0 (no coup attempts) and 0.86 for class 1 (coup attempts).</p>
 <p>Importantly, the Random Forest model identified the most significant features in predicting coup attempts. The Human Development Index (HDI), population size, and GDP were among the top predictors. These indicators highlight the critical role of socioeconomic factors in understanding and forecasting political instability. HDI reflects the overall development level of a country, while population size and GDP provide insights into demographic and economic conditions, respectively. These findings underscore the need to consider multiple dimensions of socioeconomic data when assessing the risk of coups.</p>
+</section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>Understanding the patterns and causes of coup events is crucial for analyzing political stability and identifying factors that contribute to future coup attempts. By leveraging models like Random Forest, policymakers and analysts can take proactive measures to enhance political stability and prevent future political instability. This project underscores the importance of using advanced predictive models and comprehensive socioeconomic data to anticipate and mitigate the risks that events like this can cause. The data clearly shows that developing, authoritarian, and conflict-ridden countries are more prone to frequent coups and political instability. This instability has far-reaching negative impacts on the economic, social, and human rights conditions of the affected populations. Understanding these patterns and predicting future coups is crucial for implementing measures to enhance political stability and improve the quality of life in these regions. Tracking HDI &amp; GDP can help organizations provide aid to countries in need before their instability becomes out of control.</p>
@@ -149,6 +177,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
 <p>Peyton, Buddy; Bajjalieh, Joseph; Shalmon, Dan; Martin, Michael; Bonaguro, Jonathan; Soto, Emilio (2023): Cline Center Coup d’État Project Dataset. University of Illinois at Urbana-Champaign. https://doi.org/10.13012/B2IDB-9651987_V6</p>
 <p>Nidula Elgiriyewithana. (2023). Global Country Information Dataset 2023 [Data set]. Kaggle. https://doi.org/10.34740/KAGGLE/DSV/6101670</p>
+<p>Humphery-Smith, E., &amp; Bovcon, M. (2022, June 1). Anatomy of a coup: Social and governance red flags common in vulnerable countries. Maplecroft. Retrieved from https://www.maplecroft.com/insights/analysis/anatomy-of-a-coup-social-governance-red-flags-common-vulnerable-countries/</p>
 
 
 </section>
