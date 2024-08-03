@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Joseph Shiller">
+<meta name="description" content="Random Forest Model for predicting future coups">
 
-<title>Methods # – coupsblog</title>
+<title>Methods and Data Analysis – coupsblog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -147,15 +149,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Methods #</h1>
-                      </div>
+      <h1 class="title">Methods and Data Analysis</h1>
+                  <div>
+        <div class="description">
+          Random Forest Model for predicting future coups
+        </div>
+      </div>
+                </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Joseph Shiller </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 2 2024</p>
+      </div>
+    </div>
     
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">August 2 2024</p>
+      </div>
+    </div>
       
     </div>
     
@@ -171,6 +196,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<section id="methods" class="level1">
+<h1>Methods</h1>
 <section id="pre-processing-data" class="level2">
 <h2 class="anchored" data-anchor-id="pre-processing-data">Pre-processing Data</h2>
 </section>
@@ -246,7 +273,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Random Forest can handle missing values and is less affected by imbalanced data, which is common in datasets with rare events like coups. It uses techniques like class weighting to adjust for imbalance, improving predictive performance for minority classes.</li>
 </ul></li>
 </ol>
-<div id="c12ea6eb" class="cell" data-execution_count="4">
+<div id="612c8b92" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split, StratifiedKFold, cross_val_score</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
@@ -411,6 +438,7 @@ Accuracy: 0.7948717948717948</code></pre>
 <p>Overall, this analysis suggests that the Random Forest classifier is a suitable model for predicting future coup attempts based on the provided socioeconomic and demographic data. The model highlights that a country’s development is a key indicator of political stability.</p>
 
 
+</section>
 </section>
 </section>
 
