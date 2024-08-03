@@ -2,12 +2,12 @@ project:
   type: website
 
 website:
-  title: "coupsblog"
+  title: "Predicting future political instability"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/joeshiller/projectblog/tree/main
       - icon: twitter
         href: https://twitter.com
 format:
