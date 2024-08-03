@@ -4,21 +4,63 @@
     "href": "index.html",
     "title": "coupsblog",
     "section": "",
-    "text": "Background\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nAug 2, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 30, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Background\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMethods #\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nAug 2, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 30, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
+    "objectID": "posts/Data Analysis and Models.html#loading-data",
+    "href": "posts/Data Analysis and Models.html#loading-data",
+    "title": "Methods #",
+    "section": "1. Loading Data:",
+    "text": "1. Loading Data:\n\nLoad the original datasets for coup events and country socioeconomic data.\nMerge these datasets into a single dataframe containing both socioeconomic indicators and coup event counts."
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "objectID": "posts/Data Analysis and Models.html#data-cleaning",
+    "href": "posts/Data Analysis and Models.html#data-cleaning",
+    "title": "Methods #",
+    "section": "2. Data Cleaning:",
+    "text": "2. Data Cleaning:\n\nRemove NaN values from both datasets to ensure clean data for merging.\nMerge the datasets using a common key (e.g., country name) to combine socioeconomic data with coup event data.\nFor the merged dataset, combine coup-related columns (e.g., attempted, conspiracy, coup) into a single “Coup attempts” statistic for each country by summing these columns.\nDrop the original coup-related columns, need only one binary varaible"
+  },
+  {
+    "objectID": "posts/Data Analysis and Models.html#target-variable-simplification",
+    "href": "posts/Data Analysis and Models.html#target-variable-simplification",
+    "title": "Methods #",
+    "section": "3. Target Variable Simplification:",
+    "text": "3. Target Variable Simplification:\n\nSimplify the target variable by converting the “Coup attempts” statistic into a binary variable (0 for no coup attempts, 1 for any coup attempts). This makes the classification problem binary, which is easier to model and interpret. We don’t need a number of events, only if one has happened or not, as the goal is only to predict if a future coup is going to occur soon, not how many."
+  },
+  {
+    "objectID": "posts/Data Analysis and Models.html#feature-and-target-selection",
+    "href": "posts/Data Analysis and Models.html#feature-and-target-selection",
+    "title": "Methods #",
+    "section": "4. Feature and Target Selection:",
+    "text": "4. Feature and Target Selection:\n\nDrop non-numeric and irrelevant columns (e.g., country names, regions) to focus on numeric features.\nDefine the features (X) as all relevant numeric columns except the target variable.\nDefine the target (y) as the binary “Coup attempts” variable."
+  },
+  {
+    "objectID": "posts/Data Analysis and Models.html#splitting-data",
+    "href": "posts/Data Analysis and Models.html#splitting-data",
+    "title": "Methods #",
+    "section": "5. Splitting Data:",
+    "text": "5. Splitting Data:\n\nSplit the data into training and testing sets using an 70-30 split to train the model and evaluate its performance."
+  },
+  {
+    "objectID": "posts/Data Analysis and Models.html#model-training",
+    "href": "posts/Data Analysis and Models.html#model-training",
+    "title": "Methods #",
+    "section": "6. Model Training:",
+    "text": "6. Model Training:\n\nInitialize and train a Random Forest classifier using the training data.\nUse the trained model to make predictions on the test data\nRedo all the steps using a Logistic Regression model"
+  },
+  {
+    "objectID": "posts/Data Analysis and Models.html#model-evaluation",
+    "href": "posts/Data Analysis and Models.html#model-evaluation",
+    "title": "Methods #",
+    "section": "7. Model Evaluation:",
+    "text": "7. Model Evaluation:\n\nEvaluate the model’s performance using accuracy, classification report, and cross-validation.\nCalculate and display the ROC curve and AUC to understand the model’s ability to distinguish between the classes."
+  },
+  {
+    "objectID": "posts/Data Analysis and Models.html#random-forest-model",
+    "href": "posts/Data Analysis and Models.html#random-forest-model",
+    "title": "Methods #",
+    "section": "Random Forest Model",
+    "text": "Random Forest Model\nWhy Use Random Forest?\n\nHandling Non-Linear Relationships:\n\nRandom Forest is a non-linear model, meaning it can capture complex relationships and interactions between features.This is particularly useful in real-world data where such interactions are common.\n\nRobustness to Outliers and Noise:\n\nRandom Forest is an ensemble learning method that uses multiple decision trees and aggregates their predictions. This process makes it robust to outliers and noisy data, providing more stable and reliable predictions.\n\nFeature Importance:\n\nRandom Forest models provide insights into feature importance, helping to identify which socioeconomic indicators are most influential in predicting coups. This can be valuable for understanding the underlying factors driving political instability.\n\nHandling Missing Values and Imbalanced Data:\n\nRandom Forest can handle missing values and is less affected by imbalanced data, which is common in datasets with rare events like coups. It uses techniques like class weighting to adjust for imbalance, improving predictive performance for minority classes.\n\n\n\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import classification_report, accuracy_score, roc_auc_score, roc_curve, auc\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\ncoup_data_path = '/home/jovyan/DH140-Final-Project/Coup data.csv'\ncountry_data_path = '/home/jovyan/DH140-Final-Project/Country_data.csv'\n\ncoup_data = pd.read_csv(coup_data_path)\ncountry_data = pd.read_csv(country_data_path)\n\ncoup_data_cleaned = coup_data.dropna()\ncountry_data_cleaned = country_data.dropna()\n\n\ncoup_summary = coup_data_cleaned.groupby('country')['event_type'].value_counts().unstack().fillna(0).reset_index()\n\nmerged_data = pd.merge(country_data_cleaned, coup_summary, how='left', left_on='Country', right_on='country').drop(columns=['country'])\n\n\nmerged_data_path = '/home/jovyan/DH140-Final-Project/Merged_Country_Coup_Data.csv'\nmerged_data.to_csv(merged_data_path, index=False)\n\ncoup_columns = ['attempted', 'conspiracy', 'coup']\nfor col in coup_columns:\n    merged_data[col] = merged_data[col].fillna(0)\n\nmerged_data['Coup attempts'] = merged_data[coup_columns].sum(axis=1)\n\nmerged_data = merged_data.drop(columns=coup_columns)\n\nupdated_merged_data_path = '/home/jovyan/DH140-Final-Project/Updated_Merged_Country_Coup_Data.csv'\nmerged_data.to_csv(updated_merged_data_path, index=False)\n\nnumeric_data = merged_data.drop(columns=['Country', 'UN Continental Region', 'UN Statistical Subregion']).fillna(0)\n\nX = numeric_data.drop(columns=['Coup attempts'])\ny = numeric_data['Coup attempts']\n\nmerged_data['Coup attempts binary'] = merged_data['Coup attempts'].apply(lambda x: 1 if x &gt; 0 else 0)\n\n\nnumeric_data = merged_data.drop(columns=['Country', 'UN Continental Region', 'UN Statistical Subregion']).fillna(0)\n\n\nX = numeric_data.drop(columns=['Coup attempts', 'Coup attempts binary'])\ny = numeric_data['Coup attempts binary']\n\n# Split the data into training and testing sets\n_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\n# Create and train the Random Forest Classifier\nrf_model = RandomForestClassifier(n_estimators=100, random_state=42)\nrf_model.fit(X_train, y_train)\n\n\ny_pred = rf_model.predict(X_test)\naccuracy = accuracy_score(y_test, y_pred)\nreport = classification_report(y_test, y_pred)\n\n# Cross-validation\ncv = StratifiedKFold(n_splits=5, random_state=42, shuffle=True)\ncv_accuracy = cross_val_score(rf_model, X, y, cv=cv, scoring='accuracy')\ncv_auc = cross_val_score(rf_model, X, y, cv=cv, scoring='roc_auc')\n\n\ny_pred_proba = rf_model.predict_proba(X_test)[:, 1]\n\n# Calculate ROC curve and AUC\nfpr, tpr, _ = roc_curve(y_test, y_pred_proba)\nroc_auc = auc(fpr, tpr)\n\n\nplt.figure(figsize=(10, 6))\nplt.plot(fpr, tpr, color='darkorange', lw=2, label=f'ROC curve (area = {roc_auc:.2f})')\nplt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')\nplt.xlim([0.0, 1.0])\nplt.ylim([0.0, 1.05])\nplt.xlabel('False Positive Rate')\nplt.ylabel('True Positive Rate')\nplt.title('Receiver Operating Characteristic (ROC) Curve')\nplt.legend(loc=\"lower right\")\nplt.show()\n\n# Get feature importance\nfeature_importances = pd.DataFrame(rf_model.feature_importances_, index=X.columns, columns=['importance']).sort_values('importance', ascending=False)\n\n# Plot the feature importance\nplt.figure(figsize=(12, 8))\nsns.barplot(x=feature_importances['importance'], y=feature_importances.index)\nplt.title('Feature Importance for Predicting Future Coup Attempts (Binary)')\nplt.xlabel('Importance')\nplt.ylabel('Feature')\nplt.show()\n\n# Display the cross-validation accuracy and AUC\ncv_accuracy_mean = cv_accuracy.mean()\ncv_auc_mean = cv_auc.mean()\n\n\nprint(f'Average Cross-Validation Accuracy: {cv_accuracy.mean()}')\nprint(f'Average Cross-Validation AUC: {cv_auc.mean()}')\nprint(f'Accuracy: {accuracy}')\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAverage Cross-Validation Accuracy: 0.791076923076923\nAverage Cross-Validation AUC: 0.7768790849673203\nAccuracy: 0.7948717948717948\n\n\n\nAnalysis of Results\n\nFeature Importance\nThe feature importance plot shows which features have the most influence on predicting future coup attempts. The top three features are:\n\nHDI (Human Development Index): This feature has the highest importance, suggesting that countries with different levels of human development have varying risks of coup attempts. This supports the belief that developing countries will have the highest chance of a coup attempt.\nPopulation 2022 & 2023: The population of a country in recent years is also a significant predictor, indicating that higher, denser populations may lead to more instability.\nIMF Forecast GDP (Nominal): Economic forecasts, particularly nominal GDP, are critical in determining the stability and risk of coups in a country. This shows that lower GDP, likely leads to more political instability.\n\nOther important features include %HDI Growth, Population %Change, UN Forecast GDP (Nominal), and various other economic and geographical indicators.\n\n\nROC Curve\nThe ROC curve plots the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings. The area under the ROC curve (AUC) is 0.73, indicating a reasonable ability of the model to distinguish between countries with and without coup attempts. A perfect model would have an AUC of 1.0, while a model with no discriminative ability would have an AUC of 0.5.\n\n\nCross-Validation Scores\n\nCross-Validation Accuracy Scores: The accuracy scores from 5-fold cross-validation are consistently high, ranging from approximately 0.73 to 0.84, with an average accuracy of 0.791. This indicates that the model performs well across different subsets of the data.\nCross-Validation AUC Scores: The AUC scores from cross-validation range from approximately 0.64 to 0.87, with an average AUC of 0.777. This shows that the model has a good ability to distinguish between classes across different data folds.\n\n\n\nTest Set Evaluation\n\nAccuracy: The model achieves an accuracy of 0.795 on the test set, which is consistent with the cross-validation accuracy. This suggests that the model generalizes well to unseen data.\nClassification Report: The classification report provides precision, recall, and F1-score for both classes (0 and 1). The model performs better for class 1 (countries with coup attempts), with a precision and recall of 0.86. For class 0 (countries without coup attempts), the precision and recall are both 0.64. The overall weighted average precision, recall, and F1-score are approximately 0.79.\n\n\n\n\nSummary\nThe model shows good performance in predicting future coup attempts, with HDI, population, and economic indicators being the most important features. The ROC curve and AUC indicate a reasonable discriminative ability, and cross-validation confirms the model’s robustness. The classification report highlights the model’s effectiveness, particularly for predicting countries with coup attempts.\nOverall, this analysis suggests that the Random Forest classifier is a suitable model for predicting future coup attempts based on the provided socioeconomic and demographic data. The model highlights that a country’s development is a key indicator of political stability."
   },
   {
     "objectID": "posts/DataAnalysis.html",
@@ -33,6 +75,20 @@
     "title": "Background",
     "section": "Analysis of Coup Events and Political Instability",
     "text": "Analysis of Coup Events and Political Instability\nThe analysis of coup events over time and across different countries reveals significant insights into political instability, particularly in developing, highly authoritarian, and war-torn countries. These regions tend to experience frequent coups, which contribute to severe political instability and have detrimental effects on their populations.\n\nTrends of Coup Events Over Time\nThe trend of coup events over time, categorized by event type (coup, attempted, conspiracy), shows that these incidents have been highly variable and unpredictable. Periods of intense coup activity are followed by relative calm, reflecting the instability inherent in these regions. This variability makes it challenging to anticipate future coups without advanced predictive models.\nThe top 10 countries with the most coup events are Bolivia, Sudan, Argentina, Haiti, Venezuela, Syria, Thailand, Iraq, Guatemala, and Panama. These countries share common characteristics:\n\nDeveloping Economies: Many of these countries are developing nations with fragile economies. Economic hardships and lack of opportunities can lead to dissatisfaction and unrest, providing fertile ground for coups.\nAuthoritarian Regimes: Authoritarian governments, often marked by lack of political freedoms and human rights abuses, face frequent coup attempts as different factions vie for power.\nConflict Zones: Countries like Syria and Iraq, which have experienced prolonged conflict and war, are more susceptible to coups due to the breakdown of traditional governance structures and the presence of armed groups.\n\n\n\nNegative Impacts on Populations\nCoups and political instability have severe negative impacts on the people living in these countries:\n\nEconomic Decline: Frequent coups disrupt economic activities, lead to capital flight, and deter foreign investment, resulting in economic decline and poverty.\nSocial Unrest: The instability following coups often leads to increased violence, protests, and social unrest, further destabilizing the country.\nHuman Rights Violations: Authoritarian regimes and coup leaders often resort to repression, leading to widespread human rights abuses, including arrests, torture, and extrajudicial killings.\n\nThe data clearly shows that developing, authoritarian, and conflict-ridden countries are more prone to frequent coups and political instability. This instability has far-reaching negative impacts on the economic, social, and human rights conditions of the affected populations. Understanding these patterns and predicting future coups is crucial for implementing measures to enhance political stability and improve the quality of life in these regions."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
   },
   {
     "objectID": "about.html",
